@@ -20,3 +20,4 @@ Ex adipisicing fugiat officia reprehenderit laborum est magna sit mollit dolor. 
 
 a = x.split()
 print(a)
+
