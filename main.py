@@ -18,6 +18,7 @@ Nulla fugiat occaecat deserunt consectetur commodo eiusmod ex exercitation enim 
 
 Ex adipisicing fugiat officia reprehenderit laborum est magna sit mollit dolor. Ipsum proident tempor officia nisi consectetur reprehenderit tempor sint pariatur. In ullamco officia officia in est do dolor pariatur occaecat ad minim. Reprehenderit nulla quis qui laboris nisi."""
 
-a = x.split()
+a = x.replace("a", "A")
 print(a)
+
 
