@@ -20,5 +20,3 @@ Ex adipisicing fugiat officia reprehenderit laborum est magna sit mollit dolor. 
 
 a = x.replace("a", "A")
 print(a)
-
-
