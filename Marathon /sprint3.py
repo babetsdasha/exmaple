@@ -1,9 +1,11 @@
+import random
+from collections import Counter
+
+
 def outer(name):
     def inner():
         print("Hello, " + name + "!")
     return inner
-
-# outer("Tom")()
 
 
 def divisor(num):
@@ -41,13 +43,6 @@ def concat(*args, **kwargs):
     b = "".join(map(str, kwargs.values())) 
     return a + b
 
-# # Executing of function concat with arguments 1...
-# print_arg(2)
-# print(concat(1))
-# print(concat('first string', second = 2, third = 'second string'))
-# print(concat('first string', {'first kwarg' :0, 'second kwarg': 'second kwarg'}))
-import random
-
 
 def randomWord(l):
     if not l:
@@ -56,20 +51,6 @@ def randomWord(l):
     for i in l:
         yield i
     yield from randomWord(l)
-
-
-# q = randomWord([])
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-# print(next(q))
-import re
-from collections import Counter
 
 
 def create_account(user_name: str, password: str, secret_words: list):

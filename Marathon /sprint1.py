@@ -41,35 +41,6 @@ def findPermutation(n, p, q):
     return r
 
 
-# from collections import deque
-
-# def toPostFixExpression(e):
-#     prec = {"*": 3, "/": 3, "+": 2, "-": 2, "(": 1}
-#     opStack = deque()
-#     postfixList = []
-
-#     for token in e:
-#         if token in "0123456789":
-#             postfixList.append(token)
-#         elif token == '(':
-#             opStack.append(token)
-#         elif token == ')':
-#             topToken = opStack.pop()
-#             while topToken != '(':
-#                 postfixList.append(topToken)
-#                 topToken = opStack.pop()
-#         else:
-#             while (not opStack) and \
-#                (prec[opStack[-1]] >= prec[token]):
-#                   postfixList.append(opStack.pop())
-#             opStack.append(token)
-
-#     while not opStack:
-#         postfixList.append(opStack.pop())
-#     return postfixList
-# toPostFixExpression(["2","+","3"])
-
-
 def order(a):
     if sorted(a) == a:
         return "ascending"
@@ -109,11 +80,14 @@ class Stack():
     def __init__(self):
         self.size = 0
         self.content = list()
+
     def is_empty(self):
         return not bool(self.content)
+
     def push(self,elem):
         self.content.append(elem)
         self.size = len(self.content)-1
+
     def pop(self):
         if not self.is_empty():
             elem = self.content.pop()
@@ -121,11 +95,13 @@ class Stack():
             return elem
         else:
             return None
+
     def peek(self):
         if not self.is_empty():
             return self.content[-1]
         else:
             return None
+
     def display(self):
         if not self.is_empty():
             return self.content
